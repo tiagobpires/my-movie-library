@@ -137,3 +137,60 @@ footer {
     font-size: 36px;
     font-weight: 400;
 }
+
+.form-container {
+    background-color: #F4F5F6;
+    padding: 33px 61px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.form-note {
+    font-size: 14px;
+    color: #555C63;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E8EAED;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #333333;
+    font-family: inherit;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2B2D42;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
