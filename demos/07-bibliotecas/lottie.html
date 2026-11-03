@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: Lottie</title>
+    <!-- 1. Carrega a biblioteca: ela ensina ao navegador a tag <dotlottie-wc> -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@0.10.0/dist/dotlottie-wc.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 16px; text-align: center; }
+        dotlottie-wc { display: block; width: 240px; height: 240px; margin: 24px auto; }
+    </style>
+</head>
+
+<body>
+    <h1>Lottie</h1>
+    <p>Uma animação vetorial que é só uma tag no HTML.</p>
+
+    <!-- 2. Usa a tag nova: src aponta para o arquivo da animação (.json ou .lottie) -->
+    <dotlottie-wc src="film-reels.json" autoplay loop></dotlottie-wc>
+
+    <p>Sem <code>loop</code>, toca uma vez. Sem <code>autoplay</code>, fica parada.</p>
+    <p>Milhares de animações gratuitas em <a href="https://lottiefiles.com" target="_blank" rel="noopener">lottiefiles.com</a>.</p>
+    <p><small>Abra com o Live Preview (http://): aberto direto do arquivo (file://), o navegador bloqueia o carregamento da animação.</small></p>
+</body>
+
+</html>

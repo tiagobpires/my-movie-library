@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: Bulma</title>
+    <!-- A biblioteca inteira entra com uma linha (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Bulma</h1>
+            <p class="subtitle">Nenhuma linha de CSS nossa: só classes da biblioteca.</p>
+
+            <!-- Botões -->
+            <div class="buttons">
+                <button class="button is-primary">Primary</button>
+                <button class="button is-link">Link</button>
+                <button class="button is-danger is-light">Danger light</button>
+                <button class="button is-success is-large">Large</button>
+            </div>
+
+            <!-- Colunas (já responsivas: no celular, empilham) -->
+            <div class="columns">
+                <div class="column"><div class="box has-text-centered">Coluna 1</div></div>
+                <div class="column"><div class="box has-text-centered">Coluna 2</div></div>
+                <div class="column"><div class="box has-text-centered">Coluna 3</div></div>
+            </div>
+
+            <!-- Formulário -->
+            <div class="box">
+                <div class="field">
+                    <label class="label" for="nome">Movie Name</label>
+                    <div class="control">
+                        <input class="input" type="text" id="nome" placeholder="Enter the movie title">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="email">E-mail</label>
+                    <div class="control">
+                        <input class="input is-danger" type="email" id="email" value="email-invalido">
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+                </div>
+
+                <button class="button is-dark is-fullwidth">Add</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
