@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: duas colunas</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; background: #EDF2F4; }
+        .card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 40px; }
+        .imagem { width: 200px; height: 260px; background: #8D99AE; border-radius: 8px; }
+
+        /* 1. Duas colunas: flex no pai */
+        .duas-colunas {
+            display: flex;
+            align-items: flex-start; /* alinha as colunas pelo topo */
+            gap: 32px;
+        }
+
+        /* 2. Sem isso, a imagem encolhe quando falta espaço (diminua a janela!) */
+        .com-shrink .coluna-imagem {
+            flex-shrink: 0;
+        }
+
+        /* 3. Terceiro filho entra como terceira coluna... */
+        .voltar { white-space: nowrap; }
+    </style>
+</head>
+
+<body>
+    <h1>Layout em duas colunas</h1>
+
+    <h2>1. Imagem + texto lado a lado</h2>
+    <div class="card duas-colunas com-shrink">
+        <div class="coluna-imagem">
+            <div class="imagem"></div>
+        </div>
+        <div>
+            <h3>Título</h3>
+            <p>Texto ao lado da imagem. Diminua a janela: a imagem não encolhe por causa do flex-shrink: 0.</p>
+        </div>
+    </div>
+
+    <h2>2. Problema: um terceiro filho vira terceira coluna</h2>
+    <div class="card duas-colunas com-shrink">
+        <a href="#" class="voltar">&larr; Voltar</a>
+        <div class="coluna-imagem">
+            <div class="imagem"></div>
+        </div>
+        <div>
+            <h3>Título</h3>
+            <p>O link "Voltar" deveria ficar em cima, mas virou uma coluna.</p>
+        </div>
+    </div>
+
+    <h2>3. Solução: uma "div de apoio" para agrupar as duas colunas</h2>
+    <div class="card">
+        <a href="#" class="voltar">&larr; Voltar</a>
+
+        <div class="duas-colunas com-shrink"> <!-- div de apoio -->
+            <div class="coluna-imagem">
+                <div class="imagem"></div>
+            </div>
+            <div>
+                <h3>Título</h3>
+                <p>Agora o flex está só na div de apoio, e o "Voltar" fica em cima.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
