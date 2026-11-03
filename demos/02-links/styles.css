@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    line-height: 1.6;
+    padding: 0 16px;
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+section {
+    min-height: 90vh;
+    border-top: 1px solid #ccc;
+    padding-top: 16px;
+}
