@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: links</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; line-height: 1.6; padding: 0 16px; }
+        nav { display: flex; gap: 16px; margin-bottom: 32px; }
+        section { min-height: 90vh; border-top: 1px solid #ccc; padding-top: 16px; }
+    </style>
+</head>
+
+<body>
+    <h1>Página inicial</h1>
+
+    <nav>
+        <!-- 1. link para outra página (caminho relativo: entra na pasta pages) -->
+        <a href="pages/sobre.html">Sobre</a>
+
+        <!-- 2. link para uma seção desta página (# + id) -->
+        <a href="#contato">Ir para Contato</a>
+
+        <!-- 3. link externo, abrindo em nova aba -->
+        <a href="https://neps.academy" target="_blank" rel="noopener">Neps Academy (nova aba)</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>Início</h2>
+        <p>Role a página ou clique em "Ir para Contato".</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Chegamos aqui pelo link com <code>href="#contato"</code>.</p>
+        <a href="#inicio">Voltar ao topo</a>
+    </section>
+</body>
+
+</html>
