@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+    background: #EDF2F4;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.image {
+    width: 200px;
+    height: 260px;
+    background: #8D99AE;
+    border-radius: 8px;
+}
+
+/* 1. Duas colunas: flex no pai */
+.two-columns {
+    display: flex;
+    align-items: flex-start; /* alinha as colunas pelo topo */
+    gap: 32px;
+}
+
+/* 2. Sem isso, a imagem encolhe quando falta espaço (diminua a janela!) */
+.no-shrink .image-column {
+    flex-shrink: 0;
+}
+
+/* 3. Terceiro filho entra como terceira coluna... */
+.back-link {
+    white-space: nowrap;
+}
