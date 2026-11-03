@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: animações</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; }
+        h2 { margin-top: 48px; }
+        .linha { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        button { padding: 12px 24px; font-size: 18px; border: none; border-radius: 12px; color: white; background: #EF233C; cursor: pointer; }
+
+        /* 1. :hover sem transição: muda na hora */
+        .sem-transicao:hover { background: #2B2D42; }
+
+        /* 2. :hover com transição: muda suave */
+        .com-transicao { transition: background-color 0.5s ease-in-out; }
+        .com-transicao:hover { background: #2B2D42; }
+
+        /* 3. Funções de tempo: passe o mouse na pista */
+        .pista { background: #EDF2F4; border-radius: 12px; padding: 8px; }
+        .bola { width: 40px; height: 40px; border-radius: 50%; background: #1971C2; color: white; font-size: 10px;
+                display: flex; align-items: center; justify-content: center; margin: 6px 0;
+                transition: transform 2s; }
+        .pista:hover .bola { transform: translateX(600px); }
+        .ease { transition-timing-function: ease; }
+        .linear { transition-timing-function: linear; }
+        .ease-in { transition-timing-function: ease-in; }
+        .ease-out { transition-timing-function: ease-out; }
+
+        /* 4. transform: mexe no elemento sem empurrar os vizinhos */
+        .caixa { width: 120px; height: 120px; border-radius: 12px; background: #B2F2BB;
+                 display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+        .scale:hover { transform: scale(1.2); }
+        .rotate:hover { transform: rotate(15deg); }
+        .translate:hover { transform: translateY(-15px); }
+
+        /* 5. @keyframes: animação com roteiro próprio */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulsar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        .entrada { animation: fadeInUp 1s ease-out forwards; }
+        .entrada:nth-child(2) { animation-delay: 0.3s; opacity: 0; }
+        .entrada:nth-child(3) { animation-delay: 0.6s; opacity: 0; }
+
+        .pulsando { animation: pulsar 1s ease-in-out infinite; }
+    </style>
+</head>
+
+<body>
+    <h1>Interação e animação</h1>
+
+    <h2>1 e 2. :hover sem e com transition</h2>
+    <div class="linha">
+        <button class="sem-transicao">Sem transition</button>
+        <button class="com-transicao">Com transition</button>
+    </div>
+
+    <h2>3. Funções de tempo (passe o mouse na pista)</h2>
+    <div class="pista">
+        <div class="bola ease">ease</div>
+        <div class="bola linear">linear</div>
+        <div class="bola ease-in">ease-in</div>
+        <div class="bola ease-out">ease-out</div>
+    </div>
+
+    <h2>4. transform no hover</h2>
+    <div class="linha">
+        <div class="caixa scale">scale</div>
+        <div class="caixa rotate">rotate</div>
+        <div class="caixa translate">translate</div>
+    </div>
+
+    <h2>5. @keyframes (recarregue a página)</h2>
+    <div class="linha">
+        <div class="caixa entrada">1</div>
+        <div class="caixa entrada">2</div>
+        <div class="caixa entrada">3</div>
+        <button class="pulsando">Pulsando</button>
+    </div>
+</body>
+
+</html>
